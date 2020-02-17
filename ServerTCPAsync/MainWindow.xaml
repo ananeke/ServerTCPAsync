@@ -1,0 +1,33 @@
+﻿<Window x:Class="ConnentTCPServer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConnentTCPServer"
+        mc:Ignorable="d"
+        Title="Serwer" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Address:"  VerticalAlignment="Center" Margin="5" FontSize="14"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="adrress" Text="" TextWrapping="Wrap" Margin="5" FontSize="14"/>
+        <TextBox Grid.Row="0" Grid.Column="3" Name="port" Text="" TextWrapping="Wrap" Margin="5" FontSize="14"/>
+        <Label Grid.Row="0" Grid.Column="2" Content="Port:" Margin="5" VerticalAlignment="Center" FontSize="14"/>
+        <ListBox Grid.Row="1" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Name="info"/>
+        <Button Grid.Row="2" Grid.Column="1" Name="connect" Content="Connect" Margin="5" Click="Button_Click" FontSize="14"/>
+        <Button Grid.Row="3" Grid.Column="1" Name="stop" Content="Stop" Margin="5,0,5,5" IsEnabled="False" Click="stop_Click" FontSize="14"/>
+        <Label Grid.Row="1" Grid.Column="2" Content="Message:" Margin="5" VerticalAlignment="Center" FontSize="14"/>
+        <ListBox Grid.Row="1" Grid.Column="3" Name="message" Margin="5" FontSize="14"/>
+        <!--<Button Grid.Row="2" Grid.Column="3" Name="read" Content="Read" Margin="5" Click="Button2_Click" FontSize="14"/>-->
+    </Grid>
+</Window>
